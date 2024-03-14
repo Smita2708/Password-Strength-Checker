@@ -12,11 +12,11 @@
 <body>
     <div class="parent" id="background">
         <div class="strength">
-            <div class="inputDiv">
-                <input type="password" placeholder="Write a password" class="password" id="passw">
+            <div class="heading">
+                <p class="head">Password Strength Checker</p>
             </div>
-            <div class="buttonAlign">
-                <button class="strengthButton" onclick="check()">Check the strength!</button>
+            <div class="inputDiv">
+                <input type="password" onkeyup="check()" placeholder="Write a password" class="password" id="passw">
             </div>
             <div class="para">                
                 <p>For a strong password:</p>
@@ -55,13 +55,15 @@
                 }
 
                 if (hasUppercase && hasLowercase && hasNumber && hasSpecialChar) {
-                    bg.style.backgroundColor = "#90EE90"; // Strong password
+                    bg.style.backgroundColor = "#90EE90";
+                    pass.style.backgroundColor="#90EE90" // Strong password
                 } else {
-                    bg.style.backgroundColor = "#F1EB9C"; // Medium password
+                    bg.style.backgroundColor = "#F1EB9C"; 
+                    pass.style.backgroundColor="#F1EB9C"// Medium password
                 }
             } else {
-                bg.style.backgroundColor = "#D3D3D3"; // Weak password
-                alert("Password should be at least 8 characters long");
+                bg.style.backgroundColor = "#D3D3D3"; 
+                pass.style.backgroundColor="#D3D3D3"// Weak password;
             }
         }
     </script>
